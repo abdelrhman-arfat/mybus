@@ -6,11 +6,11 @@ This document provides an overview of the API routes for the MyBus project.
 
 
 
-## API Routes
+## API Routes ⚙️
 
 
 
-### Authentication Routes
+### Authentication Routes 🔑
 
 The authentication module handles user authentication, OTP verification, and user profile management.
 
@@ -24,7 +24,7 @@ The authentication module handles user authentication, OTP verification, and use
 
 
 
-### Trip Management Routes
+### Trip Management Routes ✈️
 
 These routes handle trip creation, management, and lifecycle operations.
 
@@ -41,7 +41,7 @@ These routes handle trip creation, management, and lifecycle operations.
 
 
 
-### Trip Seat Management Routes
+### Trip Seat Management Routes 💺
 
 These routes manage seat information and reservations within a trip.
 
@@ -55,7 +55,7 @@ These routes manage seat information and reservations within a trip.
 
 
 
-### Passenger Routes
+### Passenger Routes 🚶
 
 These routes handle passenger-related operations within a trip.
 
@@ -66,7 +66,7 @@ These routes handle passenger-related operations within a trip.
 
 
 
-### Driver Routes
+### Driver Routes 🧑‍✈️
 
 These routes manage driver profiles and statistics.
 
@@ -78,7 +78,7 @@ These routes manage driver profiles and statistics.
 
 
 
-### Driver Vehicle Routes
+### Driver Vehicle Routes 🚗
 
 These routes manage vehicles associated with drivers.
 
@@ -88,7 +88,5 @@ These routes manage vehicles associated with drivers.
 | POST | `/{url}/driver/vehicles` | Add a new vehicle for a driver |
 | PUT | `/{url}/driver/vehicles/{id}` | Update vehicle data |
 | GET | `/{url}/driver/vehicles/{id}` | Delete a vehicle |
-
-
 
 
