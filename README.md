@@ -19,8 +19,8 @@ The authentication module handles user authentication, OTP verification, and use
 | POST | `/{url}/auth/send-otp` | Send OTP to user's phone number |
 | POST | `/{url}/auth/verify-otp` | Verify the OTP sent to user |
 | POST | `/{url}/auth/resend-otp` | Resend OTP if not received |
-| GET | `/{url}/auth/profile` | Get user profile information |
 | POST | `/{url}/auth/logout` | Logout user from the system |
+| GET | `/{url}/auth/profile` | Get user profile information |
 
 
 
@@ -44,49 +44,54 @@ These routes handle trip creation, management, and lifecycle operations.
 ### Trip Seat Management Routes 💺
 
 These routes manage seat information and reservations within a trip.
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/{url}/trips/{id}/seats/{seat_id}` | Get seat information |
-| PUT | `/{url}/trips/{id}/seats/{seat_id}` | Assign passenger to a seat |
-| POST | `/{url}/trips/{id}/seats/{seat_id}/reserve` | Reserve a seat |
-| POST | `/{url}/trips/{id}/seats/{seat_id}/release` | Release a reserved seat |
-| GET | `/{url}/trips/{id}/seats` | Get all seats for a trip |
-
+| Method | Endpoint                             | Description                |
+| ------ | ------------------------------------ | -------------------------- |
+| GET    | `/trips/{trip}/seats`                | Get all seats for a trip   |
+| GET    | `/trips/{trip}/seats/layout`         | Get seat layout for a trip |
+| GET    | `/trips/{trip}/seats/available`      | Get available seats        |
+| GET    | `/trips/{trip}/seats/statistics`     | Get seat statistics        |
+| GET    | `/trips/{trip}/seats/{seat}`         | Get seat by ID             |
+| PUT    | `/trips/{trip}/seats/{seat}`         | Update seat assignment     |
+| POST   | `/trips/{trip}/seats/{seat}/reserve` | Reserve a seat             |
+| POST   | `/trips/{trip}/seats/{seat}/release` | Release a reserved seat    |
+| POST   | `/trips/{trip}/seats/{seat}/disable` | Disable a seat             |
+| POST   | `/trips/{trip}/seats/{seat}/enable`  | Enable a seat              |
 
 
 ### Passenger Routes 🚶
 
 These routes handle passenger-related operations within a trip.
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/{url}/trips/{id}/passengers` | Get all passengers for a trip |
-| POST | `/{url}/trips/{id}/passengers` | Create a new passenger |
+| Method | Endpoint                                        | Description                   |
+| ------ | ----------------------------------------------- | ----------------------------- |
+| GET    | `/trips/{trip}/passengers`                      | Get all passengers for a trip |
+| POST   | `/trips/{trip}/passengers`                      | Add a new passenger           |
+| GET    | `/trips/{trip}/passengers/statistics`           | Get passenger statistics      |
+| GET    | `/trips/{trip}/passengers/{passenger}`          | Get passenger by ID           |
+| PUT    | `/trips/{trip}/passengers/{passenger}`          | Update passenger              |
+| DELETE | `/trips/{trip}/passengers/{passenger}`          | Delete passenger              |
+| POST   | `/trips/{trip}/passengers/{passenger}/board`    | Mark passenger as boarded     |
+| POST   | `/trips/{trip}/passengers/{passenger}/complete` | Mark passenger as completed   |
 
 
 
 ### Driver Routes 🧑‍✈️
 
 These routes manage driver profiles and statistics.
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/{url}/driver/profile` | Get driver profile information |
-| POST | `/{url}/driver/profile` | Update driver profile information |
-| GET | `/{url}/driver/statistics` | Get driver statistics |
-
-
+| Method | Endpoint             | Description                       |
+| ------ | -------------------- | --------------------------------- |
+| GET    | `/driver/profile`    | Get driver profile information    |
+| POST   | `/driver/profile`    | Update driver profile information |
+| GET    | `/driver/statistics` | Get driver statistics             |
 
 ### Driver Vehicle Routes 🚗
 
-These routes manage vehicles associated with drivers.
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/{url}/driver/vehicles` | Get all vehicles for a driver |
-| POST | `/{url}/driver/vehicles` | Add a new vehicle for a driver |
-| PUT | `/{url}/driver/vehicles/{id}` | Update vehicle data |
-| GET | `/{url}/driver/vehicles/{id}` | Delete a vehicle |
+| Method | Endpoint                     | Description                     |
+| ------ | ---------------------------- | ------------------------------- |
+| GET    | `/driver/vehicles`           | Get all vehicles for the driver |
+| POST   | `/driver/vehicles`           | Add a new vehicle               |
+| GET    | `/driver/vehicles/{vehicle}` | Get vehicle by ID               |
+| PUT    | `/driver/vehicles/{vehicle}` | Update vehicle data             |
+| DELETE | `/driver/vehicles/{vehicle}` | Delete a vehicle                |
 
 
