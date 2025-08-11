@@ -111,7 +111,6 @@ http://localhost:8000/storage/folder/filename.png
 
 | Method | Endpoint                     | Description                     |
 | ------ | ---------------------------- | ------------------------------- |
-| POST    | `/bus-types/bus`             | seats count                      |
-| POST    | `/bus-types/minibus`           | seats count                  |
-
+| POST    | `/bus-types/{type}`             | seats count                      |
+| 
 
