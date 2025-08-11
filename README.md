@@ -94,3 +94,10 @@ These routes manage driver profiles and statistics.
 
 Google Gemini API – Image Data Extraction 🧠📷
 The GeminiApiHandler is used to extract structured JSON data from various documents (National ID, Driver’s License, Vehicle Registration, etc.) using Google’s Gemini 2.0 Flash API.
+
+### Driver Vehicle Routes 🚗
+
+| Method | Endpoint                     | Description                     |
+| ------ | ---------------------------- | ------------------------------- |
+| POST    | `/extract-images`           | extract images                  |
+
