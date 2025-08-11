@@ -102,8 +102,16 @@ The GeminiApiHandler is used to extract structured JSON data from various docume
 | POST    | `/extract-images`           | extract images                  |
 
 
+
 ## Image Url :
 ```bash
 http://localhost:8000/storage/folder/filename.png
 ```
+### bus/types 📸
+
+| Method | Endpoint                     | Description                     |
+| ------ | ---------------------------- | ------------------------------- |
+| POST    | `/bus-types/bus`             | seats count                      |
+| POST    | `/bus-types/minibus`           | seats count                  |
+
 
