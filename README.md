@@ -1,9 +1,7 @@
 # MyBus API Documentation
 
 This document provides an overview of the API routes for the MyBus project.
-
-
-
+This document provides an overview of the API routes for the [MyBus project](https://abdelrhman-arfat.github.io/mybus/).
 
 
 ## API Routes ⚙️
@@ -94,4 +92,5 @@ These routes manage driver profiles and statistics.
 | PUT    | `/driver/vehicles/{vehicle}` | Update vehicle data             |
 | DELETE | `/driver/vehicles/{vehicle}` | Delete a vehicle                |
 
-
+Google Gemini API – Image Data Extraction 🧠📷
+The GeminiApiHandler is used to extract structured JSON data from various documents (National ID, Driver’s License, Vehicle Registration, etc.) using Google’s Gemini 2.0 Flash API.
