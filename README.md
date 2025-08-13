@@ -35,6 +35,7 @@ These routes handle trip creation, management, and lifecycle operations.
 | POST | `/{url}/trips/{id}/start` | Start the trip |
 | POST | `/{url}/trips/{id}/complete` | Complete the trip |
 | POST | `/{url}/trips/{id}/cancel` | Cancel the trip |
+| POST | `/{url}/trips/{id}/download-pdf` |download pdf of the trip data |
 
 
 
