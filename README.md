@@ -113,5 +113,9 @@ http://localhost:8000/storage/folder/filename.png
 | Method | Endpoint                     | Description                     |
 | ------ | ---------------------------- | ------------------------------- |
 | POST    | `/bus-types/{type}`             | seats count                      |
-| 
 
+### Cities 📸
+
+| Method | Endpoint                     | Description                     |
+| ------ | ---------------------------- | ------------------------------- |
+| GET    | `/cities/`             | get all cities                      |
