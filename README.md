@@ -4,6 +4,75 @@ This document provides an overview of the API routes for the MyBus project.
 This document provides an overview of the API routes for the [MyBus project](https://abdelrhman-arfat.github.io/mybus/).
 
 
+## Folder Structure
+```
+MyBus/
+├── app/
+|   |-- Handler/
+|   |   ├── ResponseHandler.php
+|   |   ├── OTPHandler.php
+|   |   ├── SeatsCountHandler.php
+|   |   ├── GeminiApiHandler.php
+|
+│   ├── Http
+|   |--- /Controllers/
+│   │   ├── Api/
+│   │   │     ├── AuthController.php      # مصادقة API
+│   │   │     ├── TripController.php      # إدارة الرحلات
+│   │   │     ├── PassengerController.php # إدارة الركاب
+│   │   │     ├── SeatController.php      # إدارة المقاعد
+│   │   │     └── DriverController.php    # إدارة السائقين
+│   │   │     └── CitiesController.php    # إدارة المدن
+│   │   └──---- AdminController.php         # لوحة الإدارة
+|
+│   ├── Services
+│   │   |-- Interfaces/
+│   │   │  ├── CitiesInterface.php
+│   │   │  ├── CrudInterface.php
+│   │   │  ├── DriverInterface.php
+│   │   │  ├── OtpVerificationInterface.php
+│   │   │  ├── PassengerInterface.php
+│   │   │  ├── SeatInterface.php
+│   │   │  ├── TripInterface.php
+│   │   │  ├── UserInterface.php
+│   │   │  └── VehicleInterface.php
+│   │   ├── CitiesService.php
+│   │   ├── DriverService.php
+│   │   ├── OtpVerificationService.php
+│   │   ├── PassengerService.php
+│   │   ├── SeatService.php
+│   │   ├── TripService.php
+│   │   ├── UserService.php
+│   │   └── VehicleService.php
+│   └── Models/
+│       ├── User.php                    # نموذج المستخدم
+│       ├── Trip.php                    # نموذج الرحلة
+│       ├── Passenger.php               # نموذج الراكب
+│       ├── Seat.php                    # نموذج المقعد
+│       ├── DriverProfile.php           # ملف السائق
+│       ├── Vehicle.php                 # نموذج المركبة
+│       └── OtpVerification.php         # التحقق من OTP
+├── database/migrations/                # هجرات قاعدة البيانات
+├── test/
+|   |-- Feature/
+|       |-- TripControllerTest #  /api/trips
+|       |-- SeatsControllerTest # /api/trips/{trip}/seats/*
+|       |-- PassengerControllerTest # /api/trips/{trip}/passengers/*
+|       |-- AuthControllerTest # /api/auth/*
+|       |-- DriverControllerTest #/api/driver/*
+|       |-- CitiesControllerTest #/api/cities/*
+|
+├── routes/
+│   ├── api.php                         # مسارات API
+│   └── web.php                         # مسارات الويب
+```
+
+## 🛠 Tech Stack
+- **Backend Framework:** Laravel (PHP) — A powerful and elegant PHP framework for building modern web applications.  
+- **Database:** MySQL — Reliable and widely-used relational database management system.  
+- **Authentication:** Laravel Sanctum — Simple and secure token-based authentication for APIs and SPAs.  
+- **Authorization & Roles:** Laravel Permission (by Spatie) — Flexible role and permission management for Laravel applications.  
+
 ## API Routes ⚙️
 
 
